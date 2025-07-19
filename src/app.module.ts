@@ -9,6 +9,8 @@ import { ProductController } from './product/product.controller';
 import { ProductService } from './product/product.service';
 import { LoggerMiddleware } from './logger/logger.middleware';
 import { ConfigModule } from '@nestjs/config';
+import { PrismaModule } from './prisma/prisma.module';
+import { UserModule } from './user/user.module';
 // import Joi from 'joi';
 
 @Module({
@@ -16,6 +18,8 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       isGlobal: true, // পুরো অ্যাপে globally config ব্যবহার করা যাবে
     }),
+    PrismaModule,
+    UserModule,
 
     // ConfigModule.forRoot({
     //   isGlobal: true,
