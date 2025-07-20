@@ -11,6 +11,8 @@ import { LoggerMiddleware } from './logger/logger.middleware';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from './prisma/prisma.module';
 import { UserModule } from './user/user.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 // import Joi from 'joi';
 
 @Module({
@@ -20,6 +22,8 @@ import { UserModule } from './user/user.module';
     }),
     PrismaModule,
     UserModule,
+    AuthModule,
+    UsersModule,
 
     // ConfigModule.forRoot({
     //   isGlobal: true,
