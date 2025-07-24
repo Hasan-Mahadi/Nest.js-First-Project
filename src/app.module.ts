@@ -13,6 +13,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { StudentModule } from './student/student.module';
 // import Joi from 'joi';
 
 @Module({
@@ -24,6 +25,7 @@ import { UsersModule } from './users/users.module';
     UserModule,
     AuthModule,
     UsersModule,
+    StudentModule,
 
     // ConfigModule.forRoot({
     //   isGlobal: true,
