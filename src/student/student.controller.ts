@@ -3,6 +3,12 @@ import { StudentService } from './student.service';
 import { CreateStudentDto } from './dto/create-student.dto';
 import { UpdateStudentDto } from './dto/update-student.dto';
 
+
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+
+
+
+@ApiTags('users')
 @Controller('student')
 export class StudentController {
   constructor(private readonly studentService: StudentService) {}
@@ -13,6 +19,8 @@ export class StudentController {
   }
 
   @Get()
+   @ApiOperation({ summary: 'List all users' })
+  @ApiResponse({ status: 200, description: 'OK' })
   findAll() {
     return this.studentService.findAll();
   }
